@@ -24,3 +24,24 @@ const squadreCalcio =
  }
 ]
 
+const genPuntiEFalli = squadreCalcio.map((element, index, arr) => {
+    return {
+        nome: element.nome,
+        puntiFatti: Math.floor((Math.random() * 100) + 1),
+        falliSubiti: Math.floor((Math.random() * 100) + 1),
+    };
+});
+
+console.log(genPuntiEFalli)
+
+const risultatiSquadre = genPuntiEFalli.map(element => {
+    return {
+        nome: element.nome,
+        falliSubiti: element.falliSubiti,
+    };
+});
+
+
+console.log(risultatiSquadre)
+
+
